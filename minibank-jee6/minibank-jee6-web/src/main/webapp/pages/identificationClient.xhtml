@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/common.xhtml">
+<ui:define name="pageTitle">identificationClient</ui:define>
+<ui:define name="pageHeader">identification client MiniBank</ui:define>
+<ui:define name="body">     
+	<h:form id="identification">
+	    numClient: <h:inputText id="numClient" value="#{clientComptes.numClient}"/>(ex: 1)<br/>
+	    password: <h:inputText id="password" value="#{clientComptes.password}"/>(ex: pwd1)<br/>
+	    <h:commandButton value="identification" 
+	                     action="#{clientComptes.identifierClient}"/>
+	</h:form>
+	<h:messages/> <h:outputText value="#{clientComptes.message}"/>
+</ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/common.xhtml">
+<ui:define name="pageTitle">listeComptes</ui:define>
+<ui:define name="pageHeader">Client et comptes</ui:define>
+<ui:define name="body">
+    <h3>client identifié [ numClient: <b><h:outputText  value="#{clientComptes.numClient}"/></b> ]</h3>
+     prenom :  <b><h:outputText  value="#{clientComptes.client.prenom}"/></b>  nom: <b><h:outputText  value="#{clientComptes.client.nom}"/></b><br/>
+     adresse : <b><h:outputText  value="#{clientComptes.client.adresse.rue}"/></b> 
+       <b><h:outputText value="#{clientComptes.client.adresse.codePostal}" /></b>  
+       <b><h:outputText value="#{clientComptes.client.adresse.ville}" /></b> <br/>
+     telephone: <b><h:outputText  value="#{clientComptes.client.telephone}"/></b><br/>
+     email :  <b><h:outputText  value="#{clientComptes.client.email}"/></b><br/>
+     <hr/>
+     <h:outputText  value="#{clientComptes.message}"/><br/>
+     <hr/>
+	<h3>liste des comptes</h3>
+	<h:form id="comptes">
+	<h:dataTable var="cpt" border="2" value="#{clientComptes.listeComptes}">
+	   <h:column>
+	     <f:facet name="header"><f:verbatim>numero</f:verbatim></f:facet>
+	     <h:outputText  value="#{cpt.numero}"/>
+	   </h:column>
+	   <h:column>
+	     <f:facet name="header"><f:verbatim>label</f:verbatim></f:facet>
+	     <h:outputText  value="#{cpt.label}"/>
+	   </h:column>
+	   <h:column>
+	     <f:facet name="header"><f:verbatim>solde</f:verbatim></f:facet>
+	     <h:outputText  value="#{cpt.solde}"/>
+	   </h:column>
+	   <h:column>
+			<f:facet name="header"><f:verbatim>détails</f:verbatim></f:facet>
+			<a href='operations_get.jsf?numCptSel=${cpt.numero}'>dernières opérations</a>			
+		</h:column>	   
+	</h:dataTable>
+	<h:commandLink action="#{clientComptes.deconnexion}" >se déconnecter </h:commandLink>
+	</h:form>
+	<hr/>
+	<a href="virement.jsf">effectuer un virement interne</a><br/>	
+</ui:define>
+</ui:composition>
+</html>

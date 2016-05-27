@@ -1,0 +1,33 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  
+  <groupId>tp</groupId> 
+  <artifactId>minibank-jee6</artifactId>
+   <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+   <description>version EJB3.1/JPA (pour Jboss7 ou Glassfish ou ...) avec tests unitaires</description>
+   <modules>
+   	<module>minibank-jee6-ejb-impl</module>
+   	<module>minibank-jee6-web</module>
+   	<module>minibank-jee6-ear</module>
+   	<module>minibank-jee6-ejb-itf</module>
+   </modules>
+   
+   
+   <build>
+		<plugins>
+		   <!-- configuration (enventuellement heritee) pour compilation en java 7 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+   
+</project>

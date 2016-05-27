@@ -1,0 +1,76 @@
+**************** Start / stop server ************************************************
+
+asadmin start-domain
+---> URL console admin = http://localhost:4848
+
+asadmin start-database --dbhome ../javadb
+
+asadmin stop-domain
+asadmin start-database
+
+******************** deploy /undeploy Jee Applications ******************************
+
+asadmin deploy ../sample-dir/hello.war
+asadmin deploy ../sample-dir/minibank-jee6.ear
+ou bien
+copy ..\sample-dir\hello.war ..\glassfish\domains\domain1\autodeploy
+---> http://localhost:8080/hello
+
+
+asadmin list-applications
+
+
+asadmin undeploy hello
+asadmin undeploy minibank-jee6
+ou bien
+del ..\glassfish\domains\domain1\autodeploy\hello.war
+
+********************* Manage JDBC ConnectionPools and JDBC resource (with jndi name) *****************
+
+asadmin create-jdbc-connection-pool --driverclassname org.apache.derby.jdbc.ClientDriver --datasourceclassname org.apache.derby.jdbc.ClientDataSource --restype javax.sql.DataSource --property portNumber=1527:password=APP:user=APP:serverName=localhost:databaseName=minibank_db_ex2 derby_minibank_pool 
+
+>>>>> avec "mysql-connector-java-5....jar" préalablement recopié dans  glassfish\domains\domain1\lib:
+asadmin create-jdbc-connection-pool --driverclassname com.mysql.jdbc.Driver --datasourceclassname com.mysql.jdbc.jdbc2.optional.MysqlDataSource  --restype javax.sql.DataSource --property portNumber=3306:password=root:user=root:serverName=localhost:databaseName=minibank_db_ex2 mysql_minibank_pool 
+asadmin create-jdbc-connection-pool --driverclassname com.mysql.jdbc.Driver --datasourceclassname com.mysql.jdbc.jdbc2.optional.MysqlXADataSource  --restype javax.sql.XADataSource --property portNumber=3306:password=root:user=root:serverName=localhost:databaseName=minibank_db_ex2 mysql_minibank_pool 
+
+asadmin list-jdbc-connection-pools
+
+asadmin ping-connection-pool  derby_minibank_pool 
+asadmin ping-connection-pool  mysql_minibank_pool
+
+Reset :
+asadmin flush-connection-pool  derby_minibank_pool 
+
+asadmin delete-jdbc-connection-pool  derby_minibank_pool 
+asadmin delete-jdbc-connection-pool  mysql_minibank_pool 
+
+
+asadmin create-jdbc-resource --connectionpoolid derby_minibank_pool jdbc/minibankDS
+asadmin create-jdbc-resource --connectionpoolid mysql_minibank_pool jdbc/minibankDS
+
+asadmin list-jdbc-resources
+
+asadmin delete-jdbc-resource  jdbc/minibankDS
+
+******************** Manage JMS  ********
+predifined : jms/__defaultConnectionFactory
+
+asadmin create-jms-resource --restype javax.jms.Queue --property Name=myQueue myQueue
+asadmin create-jms-resource --restype javax.jms.Queue --property Name=deviseQueue deviseQueue
+asadmin delete-jms-resource myQueue
+
+******************* Manage user and group (for security) *********
+
+asadmin create-file-user --groups groupname username
+asadmin create-file-user --groups guest powerUser
+
+asadmin delete-file-user userName
+asadmin delete-file-user powerUser
+
+*************** appClient **********
+
+cd ../glassfish/bin/
+appclient -jar  ../../sample-dir/external-jee-client.jar
+cd ../../bin
+
+../glassfish/bin/appclient -xml sun-acc.xml -jar  ../sample-dir/myclientapp.jar

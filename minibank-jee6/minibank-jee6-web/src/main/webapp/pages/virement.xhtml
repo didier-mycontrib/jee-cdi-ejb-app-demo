@@ -1,0 +1,25 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/common.xhtml">
+<ui:define name="pageTitle">virement</ui:define>
+<ui:define name="pageHeader">virement interne</ui:define>
+<ui:define name="body">
+	<h:form id="virement">
+	    montant à transférer:  <h:inputText id="montant" value="#{virement.montant}"/><br/><br/>
+	 
+	    compte à débiter: <h:selectOneMenu id="numCptDeb" value="#{virement.numCptDeb}">
+	    	<f:selectItems value="#{virement.comptesPossibles}" />
+	    </h:selectOneMenu><br/><br/><br/>
+	    compte à créditer: <h:selectOneMenu id="numCptCred" value="#{virement.numCptCred}">
+	    	<f:selectItems value="#{virement.comptesPossibles}" />
+	    </h:selectOneMenu> <br/>
+	    <h:commandButton value="effectuer virement" 
+	                     action="#{virement.effectuerVirement}"/>
+	</h:form>
+	<h:messages/> 
+</ui:define>
+</ui:composition>
+</html>

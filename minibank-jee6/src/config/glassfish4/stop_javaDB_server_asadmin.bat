@@ -1,0 +1,1 @@
+./asadmin stop-database

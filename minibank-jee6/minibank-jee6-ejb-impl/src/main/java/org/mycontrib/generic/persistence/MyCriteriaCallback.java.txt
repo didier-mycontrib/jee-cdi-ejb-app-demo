@@ -1,0 +1,11 @@
+package org.mycontrib.generic.persistence;
+
+import javax.persistence.EntityManager;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+
+public interface MyCriteriaCallback<T> {
+	
+	public void buildCriteria(EntityManager em,CriteriaBuilder cb,CriteriaQuery<T> cq);
+
+}

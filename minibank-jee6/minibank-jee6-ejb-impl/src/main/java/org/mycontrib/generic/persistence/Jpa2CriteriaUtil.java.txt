@@ -1,0 +1,62 @@
+package org.mycontrib.generic.persistence;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+
+/*
+ * exemples d'utilisation:
+ * 
+ * return Jpa2CriteriaUtil.criteriaSingleResult(entityManager, Devise.class, new MyCriteriaCallback<Devise>(){
+			public void buildCriteria(EntityManager em,CriteriaBuilder cb,CriteriaQuery<Devise> cq){
+				Root<Devise> deviseRoot = cq.from(Devise.class);
+				//EntityType<Devise> Devise_ = deviseRoot.getModel();
+				
+				//Predicate pGtAge = cb.gt(petRoot.get("age"),10); 
+				Predicate pEqMonnaie = cb.equal(deviseRoot.get("monnaie") , deviseName);
+				cq.select(deviseRoot);
+				cq.where(pEqMonnaie);
+			}
+		});
+		
+		
+		------------------
+		
+		return Jpa2CriteriaUtil.criteriaResultList(entityManager, Devise.class, new MyCriteriaCallback<Devise>(){
+			public void buildCriteria(EntityManager em,CriteriaBuilder cb,CriteriaQuery<Devise> cq){
+				Root<Devise> deviseRoot = cq.from(Devise.class);
+				cq.select(deviseRoot);
+			}
+		});
+ */
+
+
+
+public class Jpa2CriteriaUtil {
+	
+		
+	public static <T> List<T> criteriaResultList(EntityManager em,Class<T> entityClass,MyCriteriaCallback<T> ccb){
+		CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
+	    CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClass);
+		
+	    ccb.buildCriteria(em, criteriaBuilder, criteriaQuery);
+		
+		return em.createQuery(criteriaQuery).getResultList();
+		
+	}
+	
+	public static <T> T criteriaSingleResult(EntityManager em,Class<T> entityClass,MyCriteriaCallback<T> ccb){
+		CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
+	    CriteriaQuery<T> criteriaQuery = criteriaBuilder.createQuery(entityClass);
+		
+	    ccb.buildCriteria(em, criteriaBuilder, criteriaQuery);
+		
+		return em.createQuery(criteriaQuery).getSingleResult();
+		
+	}
+
+	
+
+}

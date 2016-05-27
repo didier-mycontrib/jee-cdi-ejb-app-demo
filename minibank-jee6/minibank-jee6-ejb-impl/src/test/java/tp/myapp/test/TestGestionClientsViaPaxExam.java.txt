@@ -1,0 +1,66 @@
+package tp.myapp.test;
+
+import javax.inject.Inject;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.ops4j.pax.exam.junit.PaxExam;
+
+import tp.myapp.minibank.core.dto.Client;
+import tp.myapp.minibank.core.service.GestionClients;
+	
+/*
+Test Jee avec pax-exam (anciennement JeeUnit) .
+--> très lent (environ 35s avec ordi rapide pour tester "ejb session + jpa")
+Config nécessaire :
+src/test/resources/exam.properties avec 
+        pax.exam.system=javaee
+        pax.exam.server.home=C:/Prog/glassfish4
+        
+src/test/resources/glassfish-config/domain.xml (copie de domain.xml  de C:\Prog\glassfish4\glassfish\domains\domain1\config)        
+
+dépendances maven : pax-exam-junit4 , pax-exam-container-glassfish-embedded (84Mo!!!) , pax-exam-servlet-bridge , pax-exam-invoker-servlet , pax-exam-cdi , 
+                   javaee-api 6 ou 7 , derby ,derbyclient
+
+ */
+
+
+@RunWith( PaxExam.class )
+public class TestGestionClientsViaPaxExam {
+	
+    @Inject
+	private GestionClients service;
+	
+	
+	@Test
+	public void testGetClientByNum(){
+		try {
+			Client cli = service.getClientByNum(1L);
+			System.out.println("client 1 = " + cli.toString());
+			Assert.assertTrue(cli.getNumero()==1L);
+		} catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+	}
+	
+	@Test
+	public void testPasswordOfClient(){
+		try {
+		
+			System.out.println("affectation  et verification du mot de passe new-pwd1 au client 1  :");
+			service.changePasswordOfClient(1L, "new-pwd1");
+			Assert.assertTrue(service.isGoodPasswordOfClient(1L, "new-pwd1"));
+			System.out.println("affectation et verification du mot de passe pwd1 au client 1  :");
+			service.changePasswordOfClient(1L, "pwd1");
+			Assert.assertTrue(service.isGoodPasswordOfClient(1L, "pwd1"));			
+		} catch (Exception e) {
+			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+	}
+	
+	
+	
+}

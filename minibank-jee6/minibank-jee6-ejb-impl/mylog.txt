@@ -1,0 +1,581 @@
+2016-05-27 17:58:30,236 DEBUG main org.hibernate.internal.SessionImpl - Opened session at timestamp: 14643647100
+2016-05-27 17:58:30,236 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - Skipping JTA sync registration due to auto join checking
+2016-05-27 17:58:30,253 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - successfully registered Synchronization
+2016-05-27 17:58:30,253 DEBUG main org.hibernate.ejb.AbstractEntityManagerImpl - Looking for a JTA transaction to join
+2016-05-27 17:58:30,288 DEBUG main org.hibernate.loader.Loader - Loading entity: [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,358 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:30,392 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:30,443 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt0_0_, compte0_.label as label0_0_, compte0_.solde as solde0_0_ from Compte compte0_ where compte0_.numCpt=?
+2016-05-27 17:58:30,537 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:30,538 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,573 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,574 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:30,574 DEBUG main org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler - HHH000163: Logical connection releasing its physical connection
+2016-05-27 17:58:30,577 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,608 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,608 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:30,608 DEBUG main org.hibernate.loader.Loader - Done entity load
+2016-05-27 17:58:30,620 DEBUG main org.hibernate.loader.Loader - Loading collection: [tp.myapp.minibank.core.entity._Compte.operations#1]
+2016-05-27 17:58:30,620 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:30,620 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:30,621 DEBUG main org.hibernate.SQL - select operations0_.ref_compte as ref5_0_1_, operations0_.numOp as numOp1_, operations0_.numOp as numOp4_0_, operations0_.ref_compte as ref5_4_0_, operations0_.dateOp as dateOp4_0_, operations0_.label as label4_0_, operations0_.montant as montant4_0_ from Operation operations0_ where operations0_.ref_compte=?
+2016-05-27 17:58:30,622 DEBUG main org.hibernate.loader.Loader - Result set contains (possibly empty) collection: [tp.myapp.minibank.core.entity._Compte.operations#1]
+2016-05-27 17:58:30,630 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:30,633 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Operation#1]
+2016-05-27 17:58:30,648 DEBUG main org.hibernate.loader.Loader - Found row of collection: [tp.myapp.minibank.core.entity._Compte.operations#1]
+2016-05-27 17:58:30,649 DEBUG main org.hibernate.loader.Loader - Result set row: 1
+2016-05-27 17:58:30,649 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Operation#2]
+2016-05-27 17:58:30,650 DEBUG main org.hibernate.loader.Loader - Found row of collection: [tp.myapp.minibank.core.entity._Compte.operations#1]
+2016-05-27 17:58:30,651 DEBUG main org.hibernate.loader.Loader - Result set row: 2
+2016-05-27 17:58:30,651 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Operation#3]
+2016-05-27 17:58:30,652 DEBUG main org.hibernate.loader.Loader - Found row of collection: [tp.myapp.minibank.core.entity._Compte.operations#1]
+2016-05-27 17:58:30,652 DEBUG main org.hibernate.loader.Loader - Result set row: 3
+2016-05-27 17:58:30,652 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Operation#6]
+2016-05-27 17:58:30,653 DEBUG main org.hibernate.loader.Loader - Found row of collection: [tp.myapp.minibank.core.entity._Compte.operations#1]
+2016-05-27 17:58:30,653 DEBUG main org.hibernate.loader.Loader - Result set row: 4
+2016-05-27 17:58:30,654 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Operation#7]
+2016-05-27 17:58:30,654 DEBUG main org.hibernate.loader.Loader - Found row of collection: [tp.myapp.minibank.core.entity._Compte.operations#1]
+2016-05-27 17:58:30,654 DEBUG main org.hibernate.loader.Loader - Result set row: 5
+2016-05-27 17:58:30,655 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Operation#9]
+2016-05-27 17:58:30,655 DEBUG main org.hibernate.loader.Loader - Found row of collection: [tp.myapp.minibank.core.entity._Compte.operations#1]
+2016-05-27 17:58:30,655 DEBUG main org.hibernate.loader.Loader - Result set row: 6
+2016-05-27 17:58:30,655 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Operation#11]
+2016-05-27 17:58:30,656 DEBUG main org.hibernate.loader.Loader - Found row of collection: [tp.myapp.minibank.core.entity._Compte.operations#1]
+2016-05-27 17:58:30,656 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,656 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:30,657 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Operation#1]
+2016-05-27 17:58:30,657 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Operation#1]
+2016-05-27 17:58:30,657 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Operation#2]
+2016-05-27 17:58:30,658 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Operation#2]
+2016-05-27 17:58:30,658 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Operation#3]
+2016-05-27 17:58:30,658 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Operation#3]
+2016-05-27 17:58:30,658 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Operation#6]
+2016-05-27 17:58:30,659 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Operation#6]
+2016-05-27 17:58:30,659 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Operation#7]
+2016-05-27 17:58:30,659 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Operation#7]
+2016-05-27 17:58:30,660 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Operation#9]
+2016-05-27 17:58:30,660 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Operation#9]
+2016-05-27 17:58:30,660 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Operation#11]
+2016-05-27 17:58:30,660 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Operation#11]
+2016-05-27 17:58:30,660 DEBUG main org.hibernate.engine.loading.internal.CollectionLoadContext - 1 collections were found in result set for role: tp.myapp.minibank.core.entity._Compte.operations
+2016-05-27 17:58:30,661 DEBUG main org.hibernate.engine.loading.internal.CollectionLoadContext - Collection fully initialized: [tp.myapp.minibank.core.entity._Compte.operations#1]
+2016-05-27 17:58:30,661 DEBUG main org.hibernate.engine.loading.internal.CollectionLoadContext - 1 collections initialized for role: tp.myapp.minibank.core.entity._Compte.operations
+2016-05-27 17:58:30,661 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:30,661 DEBUG main org.hibernate.loader.Loader - Done loading collection
+2016-05-27 17:58:30,667 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+2016-05-27 17:58:30,682 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+2016-05-27 17:58:30,702 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.operations#1], was: [tp.myapp.minibank.core.entity._Compte.operations#1] (initialized)
+2016-05-27 17:58:30,703 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.proprietaires#1], was: [tp.myapp.minibank.core.entity._Compte.proprietaires#1] (uninitialized)
+2016-05-27 17:58:30,703 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 8 objects
+2016-05-27 17:58:30,704 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+2016-05-27 17:58:30,708 DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+2016-05-27 17:58:30,709 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Operation{numero=2, montant=-30.0, label=achat zz, dateOp=2011-01-21 00:00:00.0, compte=tp.myapp.minibank.core.entity._Compte#1}
+2016-05-27 17:58:30,709 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Operation{numero=1, montant=-50.0, label=achat yy, dateOp=2011-01-20 00:00:00.0, compte=tp.myapp.minibank.core.entity._Compte#1}
+2016-05-27 17:58:30,709 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Operation{numero=11, montant=-1.0, label=debit virement, dateOp=2016-05-27 00:00:00.0, compte=tp.myapp.minibank.core.entity._Compte#1}
+2016-05-27 17:58:30,710 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Operation{numero=9, montant=-50.0, label=debit virement, dateOp=2016-05-27 00:00:00.0, compte=tp.myapp.minibank.core.entity._Compte#1}
+2016-05-27 17:58:30,712 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Compte{proprietaires=<uninitialized>, operations=[tp.myapp.minibank.core.entity._Operation#1, tp.myapp.minibank.core.entity._Operation#2, tp.myapp.minibank.core.entity._Operation#3, tp.myapp.minibank.core.entity._Operation#6, tp.myapp.minibank.core.entity._Operation#7, tp.myapp.minibank.core.entity._Operation#9, tp.myapp.minibank.core.entity._Operation#11], numero=1, solde=1051.0, label=compte courant}
+2016-05-27 17:58:30,712 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Operation{numero=7, montant=-50.0, label=debit virement, dateOp=2016-05-27 00:00:00.0, compte=tp.myapp.minibank.core.entity._Compte#1}
+2016-05-27 17:58:30,712 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Operation{numero=6, montant=2.0, label=credit virement, dateOp=2016-05-27 00:00:00.0, compte=tp.myapp.minibank.core.entity._Compte#1}
+2016-05-27 17:58:30,712 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Operation{numero=3, montant=-50.0, label=debit virement, dateOp=2016-05-27 00:00:00.0, compte=tp.myapp.minibank.core.entity._Compte#1}
+2016-05-27 17:58:30,712 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,723 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Aggressively releasing JDBC connection
+2016-05-27 17:58:30,728 DEBUG main org.hibernate.internal.SessionImpl - Opened session at timestamp: 14643647107
+2016-05-27 17:58:30,728 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - Skipping JTA sync registration due to auto join checking
+2016-05-27 17:58:30,728 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - successfully registered Synchronization
+2016-05-27 17:58:30,728 DEBUG main org.hibernate.ejb.AbstractEntityManagerImpl - Looking for a JTA transaction to join
+2016-05-27 17:58:30,729 DEBUG main org.hibernate.loader.Loader - Loading entity: [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,729 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:30,730 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:30,730 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt0_0_, compte0_.label as label0_0_, compte0_.solde as solde0_0_ from Compte compte0_ where compte0_.numCpt=?
+2016-05-27 17:58:30,731 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:30,731 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,731 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,732 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:30,732 DEBUG main org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler - HHH000163: Logical connection releasing its physical connection
+2016-05-27 17:58:30,732 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,732 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,732 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:30,732 DEBUG main org.hibernate.loader.Loader - Done entity load
+2016-05-27 17:58:30,733 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+2016-05-27 17:58:30,733 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+2016-05-27 17:58:30,733 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.operations#1], was: [tp.myapp.minibank.core.entity._Compte.operations#1] (uninitialized)
+2016-05-27 17:58:30,733 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.proprietaires#1], was: [tp.myapp.minibank.core.entity._Compte.proprietaires#1] (uninitialized)
+2016-05-27 17:58:30,734 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2016-05-27 17:58:30,734 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+2016-05-27 17:58:30,734 DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+2016-05-27 17:58:30,734 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Compte{proprietaires=<uninitialized>, operations=<uninitialized>, numero=1, solde=1051.0, label=compte courant}
+2016-05-27 17:58:30,734 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,735 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Aggressively releasing JDBC connection
+2016-05-27 17:58:30,736 DEBUG main org.hibernate.internal.SessionImpl - Opened session at timestamp: 14643647107
+2016-05-27 17:58:30,736 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - Skipping JTA sync registration due to auto join checking
+2016-05-27 17:58:30,737 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - successfully registered Synchronization
+2016-05-27 17:58:30,737 DEBUG main org.hibernate.ejb.AbstractEntityManagerImpl - Looking for a JTA transaction to join
+2016-05-27 17:58:30,737 DEBUG main org.hibernate.loader.Loader - Loading entity: [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:30,737 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:30,738 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:30,738 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt0_0_, compte0_.label as label0_0_, compte0_.solde as solde0_0_ from Compte compte0_ where compte0_.numCpt=?
+2016-05-27 17:58:30,739 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:30,739 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:30,740 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,740 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:30,740 DEBUG main org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler - HHH000163: Logical connection releasing its physical connection
+2016-05-27 17:58:30,741 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:30,741 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:30,741 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:30,741 DEBUG main org.hibernate.loader.Loader - Done entity load
+2016-05-27 17:58:30,742 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+2016-05-27 17:58:30,742 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+2016-05-27 17:58:30,742 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.operations#2], was: [tp.myapp.minibank.core.entity._Compte.operations#2] (uninitialized)
+2016-05-27 17:58:30,742 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.proprietaires#2], was: [tp.myapp.minibank.core.entity._Compte.proprietaires#2] (uninitialized)
+2016-05-27 17:58:30,743 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2016-05-27 17:58:30,743 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+2016-05-27 17:58:30,743 DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+2016-05-27 17:58:30,743 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Compte{proprietaires=<uninitialized>, operations=<uninitialized>, numero=2, solde=199.0, label=compte codevi}
+2016-05-27 17:58:30,743 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,744 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Aggressively releasing JDBC connection
+2016-05-27 17:58:30,746 DEBUG main org.hibernate.internal.SessionImpl - Opened session at timestamp: 14643647107
+2016-05-27 17:58:30,746 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - Skipping JTA sync registration due to auto join checking
+2016-05-27 17:58:30,746 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - successfully registered Synchronization
+2016-05-27 17:58:30,746 DEBUG main org.hibernate.ejb.AbstractEntityManagerImpl - Looking for a JTA transaction to join
+2016-05-27 17:58:30,747 DEBUG main org.hibernate.loader.Loader - Loading entity: [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,747 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:30,748 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:30,749 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt0_0_, compte0_.label as label0_0_, compte0_.solde as solde0_0_ from Compte compte0_ where compte0_.numCpt=?
+2016-05-27 17:58:30,750 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:30,750 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,751 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,751 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:30,751 DEBUG main org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler - HHH000163: Logical connection releasing its physical connection
+2016-05-27 17:58:30,751 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,751 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,752 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:30,752 DEBUG main org.hibernate.loader.Loader - Done entity load
+2016-05-27 17:58:30,755 DEBUG main org.hibernate.loader.Loader - Loading entity: [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:30,755 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:30,756 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:30,756 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt0_0_, compte0_.label as label0_0_, compte0_.solde as solde0_0_ from Compte compte0_ where compte0_.numCpt=?
+2016-05-27 17:58:30,757 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:30,757 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:30,758 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,758 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:30,758 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:30,758 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:30,758 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:30,758 DEBUG main org.hibernate.loader.Loader - Done entity load
+2016-05-27 17:58:30,759 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+2016-05-27 17:58:30,782 DEBUG main org.hibernate.engine.spi.ActionQueue - Executing identity-insert immediately
+2016-05-27 17:58:30,805 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:30,806 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:30,806 DEBUG main org.hibernate.SQL - insert into Operation (ref_compte, dateOp, label, montant) values (?, ?, ?, ?)
+2016-05-27 17:58:30,824 DEBUG main org.hibernate.id.IdentifierGeneratorHelper - Natively generated identity: 13
+2016-05-27 17:58:30,824 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,824 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:30,827 DEBUG main org.hibernate.engine.spi.ActionQueue - Executing identity-insert immediately
+2016-05-27 17:58:30,828 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:30,828 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:30,828 DEBUG main org.hibernate.SQL - insert into Operation (ref_compte, dateOp, label, montant) values (?, ?, ?, ?)
+2016-05-27 17:58:30,830 DEBUG main org.hibernate.id.IdentifierGeneratorHelper - Natively generated identity: 14
+2016-05-27 17:58:30,830 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,830 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:30,830 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+2016-05-27 17:58:30,831 DEBUG main org.hibernate.engine.spi.CollectionEntry - Collection dirty: [tp.myapp.minibank.core.entity._Compte.operations#1]
+2016-05-27 17:58:30,831 DEBUG main org.hibernate.engine.spi.CollectionEntry - Collection dirty: [tp.myapp.minibank.core.entity._Compte.operations#2]
+2016-05-27 17:58:30,834 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.operations#1], was: [tp.myapp.minibank.core.entity._Compte.operations#1] (uninitialized)
+2016-05-27 17:58:30,834 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.proprietaires#1], was: [tp.myapp.minibank.core.entity._Compte.proprietaires#1] (uninitialized)
+2016-05-27 17:58:30,835 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.operations#2], was: [tp.myapp.minibank.core.entity._Compte.operations#2] (uninitialized)
+2016-05-27 17:58:30,835 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.proprietaires#2], was: [tp.myapp.minibank.core.entity._Compte.proprietaires#2] (uninitialized)
+2016-05-27 17:58:30,839 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 2 updates, 0 deletions to 4 objects
+2016-05-27 17:58:30,839 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 2 updates, 0 removals to 4 collections
+2016-05-27 17:58:30,839 DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+2016-05-27 17:58:30,840 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Compte{proprietaires=<uninitialized>, operations=<uninitialized>, numero=2, solde=249.0, label=compte codevi}
+2016-05-27 17:58:30,840 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Compte{proprietaires=<uninitialized>, operations=<uninitialized>, numero=1, solde=1001.0, label=compte courant}
+2016-05-27 17:58:30,840 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Operation{numero=14, montant=50.0, label=credit virement, dateOp=Fri May 27 17:58:30 CEST 2016, compte=tp.myapp.minibank.core.entity._Compte#2}
+2016-05-27 17:58:30,840 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Operation{numero=13, montant=-50.0, label=debit virement, dateOp=Fri May 27 17:58:30 CEST 2016, compte=tp.myapp.minibank.core.entity._Compte#1}
+2016-05-27 17:58:30,884 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:30,885 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:30,885 DEBUG main org.hibernate.SQL - update Compte set label=?, solde=? where numCpt=?
+2016-05-27 17:58:30,887 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Skipping aggressive release due to manual disabling
+2016-05-27 17:58:30,893 DEBUG main org.hibernate.SQL - update Compte set label=?, solde=? where numCpt=?
+2016-05-27 17:58:30,894 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Skipping aggressive release due to manual disabling
+2016-05-27 17:58:30,895 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,895 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:30,958 DEBUG main org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - HHH000420: Closing un-released batch
+2016-05-27 17:58:30,958 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Aggressively releasing JDBC connection
+2016-05-27 17:58:30,959 DEBUG main org.hibernate.internal.SessionImpl - Opened session at timestamp: 14643647109
+2016-05-27 17:58:30,959 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - Skipping JTA sync registration due to auto join checking
+2016-05-27 17:58:30,960 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - successfully registered Synchronization
+2016-05-27 17:58:30,960 DEBUG main org.hibernate.ejb.AbstractEntityManagerImpl - Looking for a JTA transaction to join
+2016-05-27 17:58:30,960 DEBUG main org.hibernate.loader.Loader - Loading entity: [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,960 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:30,961 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:30,961 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt0_0_, compte0_.label as label0_0_, compte0_.solde as solde0_0_ from Compte compte0_ where compte0_.numCpt=?
+2016-05-27 17:58:30,962 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:30,963 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,963 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,963 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:30,963 DEBUG main org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler - HHH000163: Logical connection releasing its physical connection
+2016-05-27 17:58:30,963 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,964 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:30,964 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:30,964 DEBUG main org.hibernate.loader.Loader - Done entity load
+2016-05-27 17:58:30,964 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+2016-05-27 17:58:30,964 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+2016-05-27 17:58:30,965 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.operations#1], was: [tp.myapp.minibank.core.entity._Compte.operations#1] (uninitialized)
+2016-05-27 17:58:30,965 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.proprietaires#1], was: [tp.myapp.minibank.core.entity._Compte.proprietaires#1] (uninitialized)
+2016-05-27 17:58:30,965 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2016-05-27 17:58:30,965 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+2016-05-27 17:58:30,965 DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+2016-05-27 17:58:30,965 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Compte{proprietaires=<uninitialized>, operations=<uninitialized>, numero=1, solde=1001.0, label=compte courant}
+2016-05-27 17:58:30,966 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,967 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Aggressively releasing JDBC connection
+2016-05-27 17:58:30,968 DEBUG main org.hibernate.internal.SessionImpl - Opened session at timestamp: 14643647109
+2016-05-27 17:58:30,968 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - Skipping JTA sync registration due to auto join checking
+2016-05-27 17:58:30,968 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - successfully registered Synchronization
+2016-05-27 17:58:30,968 DEBUG main org.hibernate.ejb.AbstractEntityManagerImpl - Looking for a JTA transaction to join
+2016-05-27 17:58:30,969 DEBUG main org.hibernate.loader.Loader - Loading entity: [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:30,969 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:30,969 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:30,970 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt0_0_, compte0_.label as label0_0_, compte0_.solde as solde0_0_ from Compte compte0_ where compte0_.numCpt=?
+2016-05-27 17:58:30,972 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:30,972 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:30,972 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,972 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:30,973 DEBUG main org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler - HHH000163: Logical connection releasing its physical connection
+2016-05-27 17:58:30,973 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:30,973 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:30,973 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:30,973 DEBUG main org.hibernate.loader.Loader - Done entity load
+2016-05-27 17:58:30,974 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+2016-05-27 17:58:30,974 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+2016-05-27 17:58:30,974 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.operations#2], was: [tp.myapp.minibank.core.entity._Compte.operations#2] (uninitialized)
+2016-05-27 17:58:30,974 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.proprietaires#2], was: [tp.myapp.minibank.core.entity._Compte.proprietaires#2] (uninitialized)
+2016-05-27 17:58:30,975 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2016-05-27 17:58:30,975 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+2016-05-27 17:58:30,975 DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+2016-05-27 17:58:30,975 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Compte{proprietaires=<uninitialized>, operations=<uninitialized>, numero=2, solde=249.0, label=compte codevi}
+2016-05-27 17:58:30,975 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:30,976 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Aggressively releasing JDBC connection
+2016-05-27 17:58:30,979 DEBUG main org.hibernate.internal.SessionImpl - Opened session at timestamp: 14643647109
+2016-05-27 17:58:30,979 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - Skipping JTA sync registration due to auto join checking
+2016-05-27 17:58:30,979 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - successfully registered Synchronization
+2016-05-27 17:58:30,979 DEBUG main org.hibernate.ejb.AbstractEntityManagerImpl - Looking for a JTA transaction to join
+2016-05-27 17:58:31,105 DEBUG main org.hibernate.ejb.criteria.CriteriaQueryCompiler - Rendered criteria query -> select generatedAlias0 from _Client as generatedAlias1 inner join generatedAlias1.comptes as generatedAlias0 where generatedAlias1.numero=1L
+2016-05-27 17:58:31,258 DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - parse() - HQL: select generatedAlias0 from tp.myapp.minibank.core.entity._Client as generatedAlias1 inner join generatedAlias1.comptes as generatedAlias0 where generatedAlias1.numero=1L
+2016-05-27 17:58:31,303 DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- HQL AST ---
+ \-[QUERY] Node: 'query'
+    +-[SELECT_FROM] Node: 'SELECT_FROM'
+    |  +-[FROM] Node: 'from'
+    |  |  +-[RANGE] Node: 'RANGE'
+    |  |  |  +-[DOT] Node: '.'
+    |  |  |  |  +-[DOT] Node: '.'
+    |  |  |  |  |  +-[DOT] Node: '.'
+    |  |  |  |  |  |  +-[DOT] Node: '.'
+    |  |  |  |  |  |  |  +-[DOT] Node: '.'
+    |  |  |  |  |  |  |  |  +-[IDENT] Node: 'tp'
+    |  |  |  |  |  |  |  |  \-[IDENT] Node: 'myapp'
+    |  |  |  |  |  |  |  \-[IDENT] Node: 'minibank'
+    |  |  |  |  |  |  \-[IDENT] Node: 'core'
+    |  |  |  |  |  \-[IDENT] Node: 'entity'
+    |  |  |  |  \-[IDENT] Node: '_Client'
+    |  |  |  \-[ALIAS] Node: 'generatedAlias1'
+    |  |  \-[JOIN] Node: 'join'
+    |  |     +-[INNER] Node: 'inner'
+    |  |     +-[DOT] Node: '.'
+    |  |     |  +-[IDENT] Node: 'generatedAlias1'
+    |  |     |  \-[IDENT] Node: 'comptes'
+    |  |     \-[ALIAS] Node: 'generatedAlias0'
+    |  \-[SELECT] Node: 'select'
+    |     \-[IDENT] Node: 'generatedAlias0'
+    \-[WHERE] Node: 'where'
+       \-[EQ] Node: '='
+          +-[DOT] Node: '.'
+          |  +-[IDENT] Node: 'generatedAlias1'
+          |  \-[IDENT] Node: 'numero'
+          \-[NUM_LONG] Node: '1L'
+
+2016-05-27 17:58:31,303 DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+2016-05-27 17:58:31,380 DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select << begin [level=1, statement=select]
+2016-05-27 17:58:31,435 DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : tp.myapp.minibank.core.entity._Client (generatedAlias1) -> client0_
+2016-05-27 17:58:31,446 DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias1 -> client0_.numClient
+2016-05-27 17:58:31,450 DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : comptes -> org.hibernate.type.BagType(tp.myapp.minibank.core.entity._Client.comptes)
+2016-05-27 17:58:31,453 DEBUG main org.hibernate.hql.internal.ast.tree.FromElementFactory - createManyToMany() : path = generatedAlias1.comptes role = tp.myapp.minibank.core.entity._Client.comptes associatedEntityName = tp.myapp.minibank.core.entity._Compte
+2016-05-27 17:58:31,459 DEBUG main org.hibernate.hql.internal.ast.tree.FromElement - FromClause{level=1} : tp.myapp.minibank.core.entity._Compte (generatedAlias0) -> compte2_
+2016-05-27 17:58:31,459 DEBUG main org.hibernate.hql.internal.ast.tree.FromClause - addJoinByPathMap() : generatedAlias1.comptes -> FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=null,tableName=Compte,tableAlias=compte2_,origin=Client client0_,columns={client0_.numClient ,className=tp.myapp.minibank.core.entity._Compte}}
+2016-05-27 17:58:31,459 DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - dereferenceCollection() : Created new FROM element for generatedAlias1.comptes : ClientCompte compte2_
+2016-05-27 17:58:31,460 DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias1.comptes -> .
+2016-05-27 17:58:31,460 DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - createFromJoinElement() : -- join tree --
+ \-[JOIN_FRAGMENT] FromElement: 'ClientCompte compte2_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=tp.myapp.minibank.core.entity._Client.comptes,tableName=Compte,tableAlias=compte2_,origin=Client client0_,columns={client0_.numClient ,className=tp.myapp.minibank.core.entity._Compte}}
+
+2016-05-27 17:58:31,464 DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias0 -> compte2_.numCpt
+2016-05-27 17:58:31,473 DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias1 -> client0_.numClient
+2016-05-27 17:58:31,473 DEBUG main org.hibernate.hql.internal.ast.tree.DotNode - getDataType() : numero -> org.hibernate.type.LongType@1619d14
+2016-05-27 17:58:31,473 DEBUG main org.hibernate.hql.internal.ast.tree.FromReferenceNode - Resolved : generatedAlias1.numero -> client0_.numClient
+2016-05-27 17:58:31,477 DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select : finishing up [level=1, statement=select]
+2016-05-27 17:58:31,477 DEBUG main org.hibernate.hql.internal.ast.HqlSqlWalker - processQuery() :  ( SELECT ( {select clause} compte2_.numCpt ) ( FromClause{level=1} ( Client client0_ ClientCompte compte2_ ) ) ( where ( = ( client0_.numClient client0_.numClient numero ) 1 ) ) )
+2016-05-27 17:58:31,491 DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [Client client0_]
+2016-05-27 17:58:31,492 DEBUG main org.hibernate.hql.internal.ast.util.JoinProcessor - Using FROM fragment [inner join ClientCompte comptes1_ on client0_.numClient=comptes1_.numCli inner join Compte compte2_ on comptes1_.numCpt=compte2_.numCpt]
+2016-05-27 17:58:31,492 DEBUG main org.hibernate.hql.internal.antlr.HqlSqlBaseWalker - select >> end [level=1, statement=select]
+2016-05-27 17:58:31,493 DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - --- SQL AST ---
+ \-[SELECT] QueryNode: 'SELECT'  querySpaces (Compte,ClientCompte,Client)
+    +-[SELECT_CLAUSE] SelectClause: '{select clause}'
+    |  +-[ALIAS_REF] IdentNode: 'compte2_.numCpt as numCpt0_' {alias=generatedAlias0, className=tp.myapp.minibank.core.entity._Compte, tableAlias=compte2_}
+    |  \-[SQL_TOKEN] SqlFragment: 'compte2_.label as label0_, compte2_.solde as solde0_'
+    +-[FROM] FromClause: 'from' FromClause{level=1, fromElementCounter=2, fromElements=2, fromElementByClassAlias=[generatedAlias0, generatedAlias1], fromElementByTableAlias=[compte2_, client0_], fromElementsByPath=[generatedAlias1.comptes], collectionJoinFromElementsByPath=[], impliedElements=[]}
+    |  \-[FROM_FRAGMENT] FromElement: 'Client client0_' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias1,role=null,tableName=Client,tableAlias=client0_,origin=null,columns={,className=tp.myapp.minibank.core.entity._Client}}
+    |     \-[JOIN_FRAGMENT] FromElement: 'inner join ClientCompte comptes1_ on client0_.numClient=comptes1_.numCli inner join Compte compte2_ on comptes1_.numCpt=compte2_.numCpt' FromElement{explicit,not a collection join,not a fetch join,fetch non-lazy properties,classAlias=generatedAlias0,role=tp.myapp.minibank.core.entity._Client.comptes,tableName=Compte,tableAlias=compte2_,origin=Client client0_,columns={client0_.numClient ,className=tp.myapp.minibank.core.entity._Compte}}
+    \-[WHERE] SqlNode: 'where'
+       \-[EQ] BinaryLogicOperatorNode: '='
+          +-[DOT] DotNode: 'client0_.numClient' {propertyName=numero,dereferenceType=ALL,propertyPath=numero,path=generatedAlias1.numero,tableAlias=client0_,className=tp.myapp.minibank.core.entity._Client,classAlias=generatedAlias1}
+          |  +-[ALIAS_REF] IdentNode: 'client0_.numClient' {alias=generatedAlias1, className=tp.myapp.minibank.core.entity._Client, tableAlias=client0_}
+          |  \-[IDENT] IdentNode: 'numero' {originalText=numero}
+          \-[NUM_LONG] LiteralNode: '1'
+
+2016-05-27 17:58:31,494 DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+2016-05-27 17:58:31,516 DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - HQL: select generatedAlias0 from tp.myapp.minibank.core.entity._Client as generatedAlias1 inner join generatedAlias1.comptes as generatedAlias0 where generatedAlias1.numero=1L
+2016-05-27 17:58:31,516 DEBUG main org.hibernate.hql.internal.ast.QueryTranslatorImpl - SQL: select compte2_.numCpt as numCpt0_, compte2_.label as label0_, compte2_.solde as solde0_ from Client client0_ inner join ClientCompte comptes1_ on client0_.numClient=comptes1_.numCli inner join Compte compte2_ on comptes1_.numCpt=compte2_.numCpt where client0_.numClient=1
+2016-05-27 17:58:31,516 DEBUG main org.hibernate.hql.internal.ast.ErrorCounter - throwQueryException() : no errors
+2016-05-27 17:58:31,559 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:31,560 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:31,560 DEBUG main org.hibernate.SQL - select compte2_.numCpt as numCpt0_, compte2_.label as label0_, compte2_.solde as solde0_ from Client client0_ inner join ClientCompte comptes1_ on client0_.numClient=comptes1_.numCli inner join Compte compte2_ on comptes1_.numCpt=compte2_.numCpt where client0_.numClient=1
+2016-05-27 17:58:31,561 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:31,562 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,562 DEBUG main org.hibernate.loader.Loader - Result set row: 1
+2016-05-27 17:58:31,562 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:31,564 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:31,564 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:31,564 DEBUG main org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler - HHH000163: Logical connection releasing its physical connection
+2016-05-27 17:58:31,564 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,564 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,565 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:31,565 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:31,565 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:31,567 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+2016-05-27 17:58:31,567 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+2016-05-27 17:58:31,568 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.operations#1], was: [tp.myapp.minibank.core.entity._Compte.operations#1] (uninitialized)
+2016-05-27 17:58:31,568 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.proprietaires#1], was: [tp.myapp.minibank.core.entity._Compte.proprietaires#1] (uninitialized)
+2016-05-27 17:58:31,568 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.operations#2], was: [tp.myapp.minibank.core.entity._Compte.operations#2] (uninitialized)
+2016-05-27 17:58:31,568 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.proprietaires#2], was: [tp.myapp.minibank.core.entity._Compte.proprietaires#2] (uninitialized)
+2016-05-27 17:58:31,569 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 2 objects
+2016-05-27 17:58:31,569 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 4 collections
+2016-05-27 17:58:31,569 DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+2016-05-27 17:58:31,569 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Compte{proprietaires=<uninitialized>, operations=<uninitialized>, numero=2, solde=249.0, label=compte codevi}
+2016-05-27 17:58:31,569 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Compte{proprietaires=<uninitialized>, operations=<uninitialized>, numero=1, solde=1001.0, label=compte courant}
+2016-05-27 17:58:31,570 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:31,571 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Aggressively releasing JDBC connection
+2016-05-27 17:58:31,574 DEBUG main org.hibernate.internal.SessionImpl - Opened session at timestamp: 14643647115
+2016-05-27 17:58:31,574 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - Skipping JTA sync registration due to auto join checking
+2016-05-27 17:58:31,574 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - successfully registered Synchronization
+2016-05-27 17:58:31,574 DEBUG main org.hibernate.ejb.AbstractEntityManagerImpl - Looking for a JTA transaction to join
+2016-05-27 17:58:31,575 DEBUG main org.hibernate.loader.Loader - Loading entity: [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,575 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:31,576 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:31,576 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt0_0_, compte0_.label as label0_0_, compte0_.solde as solde0_0_ from Compte compte0_ where compte0_.numCpt=?
+2016-05-27 17:58:31,577 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:31,577 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,578 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:31,578 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:31,578 DEBUG main org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler - HHH000163: Logical connection releasing its physical connection
+2016-05-27 17:58:31,578 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,578 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,578 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:31,579 DEBUG main org.hibernate.loader.Loader - Done entity load
+2016-05-27 17:58:31,579 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+2016-05-27 17:58:31,579 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+2016-05-27 17:58:31,579 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.operations#1], was: [tp.myapp.minibank.core.entity._Compte.operations#1] (uninitialized)
+2016-05-27 17:58:31,579 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.proprietaires#1], was: [tp.myapp.minibank.core.entity._Compte.proprietaires#1] (uninitialized)
+2016-05-27 17:58:31,580 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2016-05-27 17:58:31,580 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+2016-05-27 17:58:31,580 DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+2016-05-27 17:58:31,580 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Compte{proprietaires=<uninitialized>, operations=<uninitialized>, numero=1, solde=1001.0, label=compte courant}
+2016-05-27 17:58:31,580 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:31,581 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Aggressively releasing JDBC connection
+2016-05-27 17:58:31,583 DEBUG main org.hibernate.internal.SessionImpl - Opened session at timestamp: 14643647115
+2016-05-27 17:58:31,583 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - Skipping JTA sync registration due to auto join checking
+2016-05-27 17:58:31,583 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - successfully registered Synchronization
+2016-05-27 17:58:31,583 DEBUG main org.hibernate.ejb.AbstractEntityManagerImpl - Looking for a JTA transaction to join
+2016-05-27 17:58:31,584 DEBUG main org.hibernate.loader.Loader - Loading entity: [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,584 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:31,585 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:31,585 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt0_0_, compte0_.label as label0_0_, compte0_.solde as solde0_0_ from Compte compte0_ where compte0_.numCpt=?
+2016-05-27 17:58:31,586 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:31,586 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,586 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:31,587 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:31,587 DEBUG main org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler - HHH000163: Logical connection releasing its physical connection
+2016-05-27 17:58:31,587 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,587 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,587 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:31,587 DEBUG main org.hibernate.loader.Loader - Done entity load
+2016-05-27 17:58:31,588 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+2016-05-27 17:58:31,588 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+2016-05-27 17:58:31,588 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.operations#1], was: [tp.myapp.minibank.core.entity._Compte.operations#1] (uninitialized)
+2016-05-27 17:58:31,588 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.proprietaires#1], was: [tp.myapp.minibank.core.entity._Compte.proprietaires#1] (uninitialized)
+2016-05-27 17:58:31,588 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2016-05-27 17:58:31,588 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+2016-05-27 17:58:31,588 DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+2016-05-27 17:58:31,589 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Compte{proprietaires=<uninitialized>, operations=<uninitialized>, numero=1, solde=1001.0, label=compte courant}
+2016-05-27 17:58:31,589 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:31,590 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Aggressively releasing JDBC connection
+2016-05-27 17:58:31,591 DEBUG main org.hibernate.internal.SessionImpl - Opened session at timestamp: 14643647115
+2016-05-27 17:58:31,591 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - Skipping JTA sync registration due to auto join checking
+2016-05-27 17:58:31,591 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - successfully registered Synchronization
+2016-05-27 17:58:31,591 DEBUG main org.hibernate.ejb.AbstractEntityManagerImpl - Looking for a JTA transaction to join
+2016-05-27 17:58:31,591 DEBUG main org.hibernate.loader.Loader - Loading entity: [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:31,591 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:31,592 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:31,593 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt0_0_, compte0_.label as label0_0_, compte0_.solde as solde0_0_ from Compte compte0_ where compte0_.numCpt=?
+2016-05-27 17:58:31,594 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:31,594 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:31,595 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:31,595 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:31,595 DEBUG main org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler - HHH000163: Logical connection releasing its physical connection
+2016-05-27 17:58:31,595 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:31,595 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:31,595 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:31,595 DEBUG main org.hibernate.loader.Loader - Done entity load
+2016-05-27 17:58:31,596 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+2016-05-27 17:58:31,596 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+2016-05-27 17:58:31,596 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.operations#2], was: [tp.myapp.minibank.core.entity._Compte.operations#2] (uninitialized)
+2016-05-27 17:58:31,596 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.proprietaires#2], was: [tp.myapp.minibank.core.entity._Compte.proprietaires#2] (uninitialized)
+2016-05-27 17:58:31,597 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2016-05-27 17:58:31,597 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+2016-05-27 17:58:31,597 DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+2016-05-27 17:58:31,597 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Compte{proprietaires=<uninitialized>, operations=<uninitialized>, numero=2, solde=249.0, label=compte codevi}
+2016-05-27 17:58:31,597 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:31,598 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Aggressively releasing JDBC connection
+2016-05-27 17:58:31,599 DEBUG main org.hibernate.internal.SessionImpl - Opened session at timestamp: 14643647115
+2016-05-27 17:58:31,599 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - Skipping JTA sync registration due to auto join checking
+2016-05-27 17:58:31,599 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - successfully registered Synchronization
+2016-05-27 17:58:31,599 DEBUG main org.hibernate.ejb.AbstractEntityManagerImpl - Looking for a JTA transaction to join
+2016-05-27 17:58:31,600 DEBUG main org.hibernate.loader.Loader - Loading entity: [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,600 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:31,600 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:31,601 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt0_0_, compte0_.label as label0_0_, compte0_.solde as solde0_0_ from Compte compte0_ where compte0_.numCpt=?
+2016-05-27 17:58:31,602 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:31,602 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,603 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:31,603 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:31,603 DEBUG main org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler - HHH000163: Logical connection releasing its physical connection
+2016-05-27 17:58:31,603 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,603 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,603 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:31,604 DEBUG main org.hibernate.loader.Loader - Done entity load
+2016-05-27 17:58:31,604 DEBUG main org.hibernate.loader.Loader - Loading entity: [tp.myapp.minibank.core.entity._Compte#-2]
+2016-05-27 17:58:31,604 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:31,604 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:31,605 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt0_0_, compte0_.label as label0_0_, compte0_.solde as solde0_0_ from Compte compte0_ where compte0_.numCpt=?
+2016-05-27 17:58:31,606 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:31,606 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:31,607 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:31,607 DEBUG main org.hibernate.loader.Loader - Done entity load
+2016-05-27 17:58:31,609 ERROR main tp.myapp.minibank.core.service.impl.ejb.GestionComptesImpl - echec GestionComptesImpl.transferer
+java.lang.NullPointerException
+	at tp.myapp.minibank.core.service.impl.ejb.GestionComptesImpl.transferer(GestionComptesImpl.java:119)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.openejb.core.interceptor.ReflectionInvocationContext$Invocation.invoke(ReflectionInvocationContext.java:192)
+	at org.apache.openejb.core.interceptor.ReflectionInvocationContext.proceed(ReflectionInvocationContext.java:173)
+	at tp.myapp.minibank.core.interceptors.ExecutionTimeInterceptor.timeLogging(ExecutionTimeInterceptor.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.openejb.core.interceptor.ReflectionInvocationContext$Invocation.invoke(ReflectionInvocationContext.java:192)
+	at org.apache.openejb.core.interceptor.ReflectionInvocationContext.proceed(ReflectionInvocationContext.java:173)
+	at org.apache.openejb.monitoring.StatsInterceptor.record(StatsInterceptor.java:181)
+	at org.apache.openejb.monitoring.StatsInterceptor.invoke(StatsInterceptor.java:100)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.apache.openejb.core.interceptor.ReflectionInvocationContext$Invocation.invoke(ReflectionInvocationContext.java:192)
+	at org.apache.openejb.core.interceptor.ReflectionInvocationContext.proceed(ReflectionInvocationContext.java:173)
+	at org.apache.openejb.core.interceptor.InterceptorStack.invoke(InterceptorStack.java:85)
+	at org.apache.openejb.core.stateless.StatelessContainer._invoke(StatelessContainer.java:227)
+	at org.apache.openejb.core.stateless.StatelessContainer.invoke(StatelessContainer.java:194)
+	at org.apache.openejb.core.ivm.EjbObjectProxyHandler.synchronizedBusinessMethod(EjbObjectProxyHandler.java:308)
+	at org.apache.openejb.core.ivm.EjbObjectProxyHandler.businessMethod(EjbObjectProxyHandler.java:303)
+	at org.apache.openejb.core.ivm.EjbObjectProxyHandler._invoke(EjbObjectProxyHandler.java:92)
+	at org.apache.openejb.core.ivm.BaseEjbProxyHandler.invoke(BaseEjbProxyHandler.java:321)
+	at com.sun.proxy.$Proxy76.transferer(Unknown Source)
+	at tp.myapp.test.TestGestionComptesViaOpenEjb.testMauvaisTransfert(TestGestionComptesViaOpenEjb.java:102)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:44)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:15)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:41)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:20)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:76)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:193)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:52)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:191)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:42)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:184)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:28)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:236)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+2016-05-27 17:58:31,625 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Aggressively releasing JDBC connection
+2016-05-27 17:58:31,632 DEBUG main org.hibernate.internal.SessionImpl - Opened session at timestamp: 14643647116
+2016-05-27 17:58:31,633 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - Skipping JTA sync registration due to auto join checking
+2016-05-27 17:58:31,633 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - successfully registered Synchronization
+2016-05-27 17:58:31,633 DEBUG main org.hibernate.ejb.AbstractEntityManagerImpl - Looking for a JTA transaction to join
+2016-05-27 17:58:31,634 DEBUG main org.hibernate.loader.Loader - Loading entity: [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,635 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:31,636 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:31,636 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt0_0_, compte0_.label as label0_0_, compte0_.solde as solde0_0_ from Compte compte0_ where compte0_.numCpt=?
+2016-05-27 17:58:31,637 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:31,638 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,638 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:31,638 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:31,638 DEBUG main org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler - HHH000163: Logical connection releasing its physical connection
+2016-05-27 17:58:31,639 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,639 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#1]
+2016-05-27 17:58:31,639 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:31,639 DEBUG main org.hibernate.loader.Loader - Done entity load
+2016-05-27 17:58:31,639 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+2016-05-27 17:58:31,639 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+2016-05-27 17:58:31,640 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.operations#1], was: [tp.myapp.minibank.core.entity._Compte.operations#1] (uninitialized)
+2016-05-27 17:58:31,640 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.proprietaires#1], was: [tp.myapp.minibank.core.entity._Compte.proprietaires#1] (uninitialized)
+2016-05-27 17:58:31,640 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2016-05-27 17:58:31,641 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+2016-05-27 17:58:31,641 DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+2016-05-27 17:58:31,641 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Compte{proprietaires=<uninitialized>, operations=<uninitialized>, numero=1, solde=1001.0, label=compte courant}
+2016-05-27 17:58:31,641 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:31,642 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Aggressively releasing JDBC connection
+2016-05-27 17:58:31,643 DEBUG main org.hibernate.internal.SessionImpl - Opened session at timestamp: 14643647116
+2016-05-27 17:58:31,644 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - Skipping JTA sync registration due to auto join checking
+2016-05-27 17:58:31,644 DEBUG main org.hibernate.engine.transaction.internal.TransactionCoordinatorImpl - successfully registered Synchronization
+2016-05-27 17:58:31,644 DEBUG main org.hibernate.ejb.AbstractEntityManagerImpl - Looking for a JTA transaction to join
+2016-05-27 17:58:31,644 DEBUG main org.hibernate.loader.Loader - Loading entity: [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:31,644 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtaining JDBC connection
+2016-05-27 17:58:31,645 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Obtained JDBC connection
+2016-05-27 17:58:31,645 DEBUG main org.hibernate.SQL - select compte0_.numCpt as numCpt0_0_, compte0_.label as label0_0_, compte0_.solde as solde0_0_ from Compte compte0_ where compte0_.numCpt=?
+2016-05-27 17:58:31,647 DEBUG main org.hibernate.loader.Loader - Result set row: 0
+2016-05-27 17:58:31,647 DEBUG main org.hibernate.loader.Loader - Result row: EntityKey[tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:31,648 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:31,648 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Released JDBC connection
+2016-05-27 17:58:31,648 DEBUG main org.hibernate.engine.jdbc.internal.proxy.ConnectionProxyHandler - HHH000163: Logical connection releasing its physical connection
+2016-05-27 17:58:31,649 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Resolving associations for [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:31,649 DEBUG main org.hibernate.engine.internal.TwoPhaseLoad - Done materializing entity [tp.myapp.minibank.core.entity._Compte#2]
+2016-05-27 17:58:31,649 DEBUG main org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+2016-05-27 17:58:31,650 DEBUG main org.hibernate.loader.Loader - Done entity load
+2016-05-27 17:58:31,650 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+2016-05-27 17:58:31,650 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+2016-05-27 17:58:31,651 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.operations#2], was: [tp.myapp.minibank.core.entity._Compte.operations#2] (uninitialized)
+2016-05-27 17:58:31,651 DEBUG main org.hibernate.engine.internal.Collections - Collection found: [tp.myapp.minibank.core.entity._Compte.proprietaires#2], was: [tp.myapp.minibank.core.entity._Compte.proprietaires#2] (uninitialized)
+2016-05-27 17:58:31,651 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 insertions, 0 updates, 0 deletions to 1 objects
+2016-05-27 17:58:31,651 DEBUG main org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 0 (re)creations, 0 updates, 0 removals to 2 collections
+2016-05-27 17:58:31,651 DEBUG main org.hibernate.internal.util.EntityPrinter - Listing entities:
+2016-05-27 17:58:31,652 DEBUG main org.hibernate.internal.util.EntityPrinter - tp.myapp.minibank.core.entity._Compte{proprietaires=<uninitialized>, operations=<uninitialized>, numero=2, solde=249.0, label=compte codevi}
+2016-05-27 17:58:31,652 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Releasing JDBC connection
+2016-05-27 17:58:31,653 DEBUG main org.hibernate.engine.jdbc.internal.LogicalConnectionImpl - Aggressively releasing JDBC connection

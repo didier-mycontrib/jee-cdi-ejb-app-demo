@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sun-ejb-jar PUBLIC "-//Sun Microsystems, Inc.//DTD Application Server 9.0 EJB 3.0//EN" "http://www.sun.com/software/appserver/dtds/sun-ejb-jar_3_0-0.dtd">
+<sun-ejb-jar>
+    <security-role-mapping>
+        <role-name>friends</role-name>
+        <group-name>guest</group-name> <!-- As defined in container (via console or asadmin) -->
+    </security-role-mapping>
+    <security-role-mapping>
+        <role-name>guest</role-name>
+        <group-name>guest</group-name> <!-- As defined in container (via console or asadmin) -->
+        <!-- si via console , partie "Configuration / server-config / Security / Realms / file / Manage user / add user" 
+             si via asadmin , asadmin create-file-user __groups groupname username -->
+    </security-role-mapping>
+    <enterprise-beans />
+</sun-ejb-jar>

@@ -1,0 +1,20 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/templates/common.xhtml">
+<ui:define name="pageTitle">conversion</ui:define>
+<ui:define name="pageHeader">conversion de monnaies</ui:define>
+<ui:define name="body">
+	<h:form id="frm">
+	   monnaie1 (source):<h:inputText id="m1" value="#{conversion.monnaie1}"/><br/>
+	   monnaie2 (cible) :<h:inputText id="m2" value="#{conversion.monnaie2}"/><br/>
+	   montant:<h:inputText id="montantInput" value="#{conversion.montant}"/><br/>
+	   <h:commandButton  id="convertButton" value="convertir" action="#{conversion.convertir}"  /> <br/>
+	   somme convertie: <h:outputText id="somme_convertie" value="#{conversion.sommeConvertie}"/>
+	</h:form>
+	<h:messages/> 
+</ui:define>
+</ui:composition>
+</html>
